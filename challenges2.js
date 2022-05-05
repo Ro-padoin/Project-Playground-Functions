@@ -48,8 +48,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+  function hydrate(input) {
+  const newValueInput = input.split(' ');
+
+  let contador = 0;
+  for(let item of newValueInput) {
+    if (!isNaN(Number(item))) {
+      contador += Number(item);
+    }
+  }
+  if (contador === 1) {
+    return `${contador} copo de água`;
+  } 
+  return `${contador} copos de água`;
 }
 
 module.exports = {
